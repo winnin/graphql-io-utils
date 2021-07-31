@@ -6,7 +6,10 @@
   "scripts": {
     "test": "eslint -c .eslintrc --fix '**/*.js' && jest"
   },
-  "keywords": ["graphql", "validation"],
+  "keywords": [
+    "graphql",
+    "validation"
+  ],
   "author": "Winnin Inc. (https://winnin.com)",
   "license": "MIT",
   "dependencies": {
@@ -16,5 +19,16 @@
     "eslint": "^7.31.0",
     "graphql-tools": "^7.0.5",
     "jest": "^27.0.6"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/winnin/graphql-io-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/winnin/graphql-io-utils/issues"
+  },
+  "homepage": "https://github.com/winnin/graphql-io-utils#readme"
 }
