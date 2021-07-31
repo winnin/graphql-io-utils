@@ -1,5 +1,5 @@
 {
-  "name": "@winnin/graphql-io-utils",
+  "name": "@winninjs/graphql-io-utils",
   "version": "1.0.0",
   "description": "Utilities directives to help on graphql input validation and sanitization.",
   "main": "index.js",

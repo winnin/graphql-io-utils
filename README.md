@@ -5,7 +5,7 @@ Utilities directives to help on graphql input/output validation and sanitization
 # Installation
 
 ```sh
-npm i @winnin/graphql-io-utils
+npm i @winninjs/graphql-io-utils
 ```
 It includes two directives:
 
