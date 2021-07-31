@@ -1,0 +1,20 @@
+{
+  "name": "@winnin/graphql-io-utils",
+  "version": "1.0.0",
+  "description": "Utilities directives to help on graphql input validation and sanitization.",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint -c .eslintrc --fix '**/*.js' && jest"
+  },
+  "keywords": ["graphql", "validation"],
+  "author": "Winnin Inc. (https://winnin.com)",
+  "license": "MIT",
+  "dependencies": {
+    "graphql": "^15.5.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.31.0",
+    "graphql-tools": "^7.0.5",
+    "jest": "^27.0.6"
+  }
+}
