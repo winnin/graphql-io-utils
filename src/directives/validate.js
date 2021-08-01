@@ -1,10 +1,9 @@
 const { SchemaDirectiveVisitor } = require("graphql-tools")
 const { GraphQLScalarType, GraphQLNonNull } = require("graphql")
+const emailValidator = require("email-validator")
 
 const validations ={
-  email:function(value){
-    return value.match(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
-  },
+  email:emailValidator.validate,
   url:function(value){
     try {
       new URL(value)
@@ -142,8 +141,8 @@ class ValidateScalarType extends GraphQLScalarType {
 }
 
 module.exports={
-  definition:ValidateDirective,
-  directive:`directive @validate(
+  directive:{validate:ValidateDirective},
+  definition:`directive @validate(
     email:Boolean,
     url:Boolean,
     alpha:Boolean,

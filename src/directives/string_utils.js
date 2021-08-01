@@ -45,8 +45,8 @@ class StringUtilsScalarType extends GraphQLScalarType {
     })
   }
 }
-const directive = 'directive @stringUtils(stringMethods:[String!]!) on FIELD_DEFINITION | INPUT_FIELD_DEFINITION | ARGUMENT_DEFINITION'
+const definition = 'directive @stringUtils(stringMethods:[String!]!) on FIELD_DEFINITION | INPUT_FIELD_DEFINITION | ARGUMENT_DEFINITION'
 module.exports= {
-  definition:StringUtilsDirective,
-  directive
+  definition,
+  directive:{stringUtils:StringUtilsDirective}
 }

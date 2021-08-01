@@ -1,12 +1,41 @@
 # graphql-io-utils
  
-Utilities directives to help on graphql input/output validation and sanitization.
+Utilities directives and scalar types to help on graphql input/output validation and sanitization.
 
 # Installation
 
 ```sh
 npm i @winninjs/graphql-io-utils
 ```
+
+# Scalar
+
+## Email
+
+Represents a valid email
+
+```graphql
+type Query{
+  
+  email:Email! # Returns a non-null valid Email
+  sendEmail(email:Email):Email # Send and returns a valid Email
+}
+```
+
+## URL 
+
+Represents a valid URL
+
+```graphql
+type Query{
+  
+  url:URL! # Returns a non-null valid URL
+  sendURL(url:URL):URL # Send and returns a valid URL
+}
+```
+
+# Directives
+
 It includes two directives:
 
 1 - stringUtils, which lets you run a method over a string input or output

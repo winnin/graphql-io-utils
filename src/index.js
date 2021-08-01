@@ -1,17 +1,12 @@
-const {definition:definitionStringUtils,directive:directiveStringUtils} = require('./string_utils')
-const {definition:definitionValidate,directive:directiveValidate} = require('./validate')
+const directives = require('./directives')
+const scalar = require('./scalar')
 
 let exportedObj = null
 module.exports = function(){
   if(!exportedObj){
     exportedObj = {
-      direcives:{
-        schemaDirectives:{
-          stringUtils:directiveStringUtils,
-          validate:directiveValidate,
-        },
-        definition:`${definitionStringUtils}\n${definitionValidate}`
-      }
+      directives,
+      scalar
     }
   }
   return exportedObj

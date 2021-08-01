@@ -1,10 +1,10 @@
 const { makeExecutableSchema } = require('@graphql-tools/schema')
 const { graphql } = require('graphql')
 const { SchemaDirectiveVisitor } = require('@graphql-tools/utils')
-const { definition, directive } = require('../src/string_utils')
+const { definition, directive } = require('../../src/directives/string_utils')
 
 let schema = `
-${directive}
+${definition}
 type Query{
   getTrimmedAndUpper:String! @stringUtils(stringMethods:["trim","toUpperCase"])
   sendTrimmedAndLower(trimmedAndLower:String!@stringUtils(stringMethods:["trim","toLowerCase"])):String!
@@ -27,7 +27,7 @@ schema = makeExecutableSchema({
   typeDefs: schema,
   resolvers
 })
-SchemaDirectiveVisitor.visitSchemaDirectives(schema, {stringUtils:definition})
+SchemaDirectiveVisitor.visitSchemaDirectives(schema, directive)
 
 describe('StringUtils', function() {
   test("Must fix output", async function (){

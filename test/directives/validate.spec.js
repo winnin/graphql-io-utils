@@ -1,12 +1,12 @@
 const { makeExecutableSchema } = require('@graphql-tools/schema')
 const { graphql } = require('graphql')
 const { SchemaDirectiveVisitor } = require('@graphql-tools/utils')
-const { definition, directive } = require('../src/validate')
+const { definition, directive } = require('../../src/directives/validate')
 const floatValidator = 5
 const lengthValidator = 1
 const stringValidator = "test"
 let schema = `
-${directive}
+${definition}
 type Query{
   email(value:String! @validate(email:true)):String!
   url(value:String! @validate(url:true)):String!
@@ -60,7 +60,7 @@ schema = makeExecutableSchema({
   typeDefs: schema,
   resolvers
 })
-SchemaDirectiveVisitor.visitSchemaDirectives(schema, {validate:definition})
+SchemaDirectiveVisitor.visitSchemaDirectives(schema, directive)
 
 describe('Validate', function() {
   test("Must support email", async function (){
