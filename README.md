@@ -34,6 +34,17 @@ type Query{
 }
 ```
 
+## PII 
+
+Redacts PII info on string
+
+```graphql
+type Query{
+  
+  piiData:PII! # Returns a redacted PII string
+}
+```
+
 # Directives
 
 It includes two directives:
