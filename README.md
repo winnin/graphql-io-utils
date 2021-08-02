@@ -2,15 +2,15 @@
  
 Utilities directives and scalar types to help on graphql input/output validation and sanitization.
 
-# Installation
+## Installation
 
 ```sh
 npm i @winninjs/graphql-io-utils
 ```
 
-# Scalar
+## Scalar
 
-## Email
+### Email
 
 Represents a valid email
 
@@ -22,7 +22,7 @@ type Query{
 }
 ```
 
-## URL 
+### URL 
 
 Represents a valid URL
 
@@ -34,7 +34,7 @@ type Query{
 }
 ```
 
-## PII 
+### PII 
 
 Redacts PII info on string
 
@@ -45,11 +45,13 @@ type Query{
 }
 ```
 
-# Directives
+## Directives
 
 It includes two directives:
 
-1 - stringUtils, which lets you run a method over a string input or output
+### @stringUtils
+
+Lets you run a method over a string input or output
 
 ```graphql
 type Query{
@@ -60,8 +62,9 @@ type Query{
 
 }
 ```
+### @validate
 
-2 - validate, runs common validations over input
+Runs common validations over input
 
 ```graphql
 type Query{
