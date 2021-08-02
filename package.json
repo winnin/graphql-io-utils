@@ -1,6 +1,6 @@
 {
   "name": "@winninjs/graphql-io-utils",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "description": "Utilities directives and scalar types to help on graphql input/output validation and sanitization.",
   "main": "src/index.js",
   "scripts": {
