@@ -1,4 +1,4 @@
-const { SchemaDirectiveVisitor } = require("@graphql-tools/utils")
+const { SchemaDirectiveVisitor } = require("graphql-tools")
 const { GraphQLScalarType, GraphQLNonNull } = require("graphql")
 
 class StringUtilsDirective extends SchemaDirectiveVisitor {
