@@ -4,7 +4,8 @@
   "description": "Utilities directives and scalar types to help on graphql input/output validation and sanitization.",
   "main": "index.js",
   "scripts": {
-    "test": "eslint -c .eslintrc --fix '**/*.js' && jest"
+    "test": "eslint -c .eslintrc --fix '**/*.js' && jest",
+    "release": "release"
   },
   "keywords": [
     "graphql",
@@ -20,7 +21,8 @@
   "devDependencies": {
     "eslint": "^7.31.0",
     "graphql-tools": "^7.0.5",
-    "jest": "^27.0.6"
+    "jest": "^27.0.6",
+    "release": "^6.3.0"
   },
   "directories": {
     "test": "test"
